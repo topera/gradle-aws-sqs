@@ -3,8 +3,19 @@
 This example shows how to configure AWS SQS automatically and use it.
 
 ## How to test
-* Linux/MacOs: run in a terminal `$ ./gradlew`
-* Windows: run in a terminal `gradlew.bat`
+* Go to AWS console and access IAM (Identity and Access Management).
+* Follow their instructions to create a "access key ID" and "secret access key" pair
+* Create this file/folder to config your credentials: `~/.aws/credentials`
+* Add there a block like this one:
+<pre>
+[default]
+aws_access_key_id = ADSEFDAXFFGFDSDFDSEE
+aws_secret_access_key = 5k3jskj4kjk2ldkfje/fdkjfrlkREs/ldsaREAsr
+</pre>
+* With the steps above we create a credential called 'default' that will be used to access AWS.
+* Now we'll run our Hello World that will create a new Queue in SQS and add 2 messages there
+* Run `$ ./gradlew`
+* Now access AWS -> SQS e notice that we have a new queue created, with 2 messages.
 
 ## Tech Stack
 * Intellij IDEA 2018.1
