@@ -5,7 +5,7 @@ This example shows how to configure AWS SQS automatically and use it.
 ## How to test
 * Go to AWS console and access IAM (Identity and Access Management).
 * Follow their instructions to create a "access key ID" and "secret access key" pair
-* Create this file/folder to config your credentials: `~/.aws/credentials`
+* In your machine, create this file to config your credentials: `~/.aws/credentials`
 * Add there a block like this one:
 <pre>
 [default]
