@@ -1,0 +1,12 @@
+// tested with gradle 4.0.0
+plugins {
+    id 'idea' // better IDEA support
+    id 'java' // allow java usage
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+}
