@@ -10,7 +10,7 @@ buildscript { // config how this gradle script will work
 
 plugins {
     id 'idea' // better IDEA support (optional)
-    id 'java' // allow java usage
+    id 'application' // allow execution of Main class directly from gradle(includes the java plugin)
 }
 
 apply plugin: "io.spring.dependency-management" // required by AWS: allow the usage of 'mavenBom' below
@@ -28,3 +28,6 @@ dependencyManagement {
 dependencies {
     compile 'software.amazon.awssdk:s3' // required by AWS
 }
+
+// specifies which is the main class to run this example
+mainClassName = "com.topera.hello.Main"
