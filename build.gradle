@@ -1,12 +1,30 @@
 // tested with gradle 4.7
+buildscript { // config how this gradle script will work
+    repositories {
+        mavenCentral() // in this block of code we'll get packages from mavenCentral repository
+    }
+    dependencies {
+        classpath 'io.spring.gradle:dependency-management-plugin:1.0.5.RELEASE' // required by AWS: allow the usage of plugin "io.spring.dependency-management"
+    }
+}
+
 plugins {
-    id 'idea' // better IDEA support
+    id 'idea' // better IDEA support (optional)
     id 'java' // allow java usage
 }
 
+apply plugin: "io.spring.dependency-management" // required by AWS: allow the usage of 'mavenBom' below
+
 repositories {
-    jcenter()
+    jcenter() // in the main block of code we'll get packages from jcenter repository
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'software.amazon.awssdk:bom:2.0.0-preview-9' // required by AWS: make possible find 'software.amazon.awssdk:s3' below
+    }
 }
 
 dependencies {
+    compile 'software.amazon.awssdk:s3' // required by AWS
 }
