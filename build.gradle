@@ -31,3 +31,6 @@ dependencies {
 
 // specifies which is the main class to run this example
 mainClassName = "com.topera.hello.Main"
+
+// specifies that "gradle" will be an alias for "gradle run"
+defaultTasks "run"

@@ -3,7 +3,8 @@
 This example shows how to configure AWS SQS automatically and use it.
 
 ## How to test
-TODO
+* Linux/MacOs: `$ ./gradlew`
+* Windows: `gradle.bat`
 
 ## Tech Stack
 * Intellij IDEA 2018.1
